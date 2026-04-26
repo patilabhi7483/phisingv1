@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhishForensics AI - Threat Analyzer</title>
+    <link rel="stylesheet" href="index.css">
+    <meta name="description" content="AI-powered forensic engine for emails and URLs to detect phishing attacks before they trick you.">
+</head>
+<body>
+    <!-- Scanning Overlay -->
+    <div id="scanningOverlay" class="scanning-overlay hidden">
+        <div class="scanning-content">
+            <h2 class="scanning-title">Initializing Deep Scan...</h2>
+            <div id="scanSteps" class="scan-steps"></div>
+            <div class="loader-bar"><div class="loader-fill"></div></div>
+        </div>
+    </div>
+
+    <header class="app-header">
+        <div class="logo-container">
+            <span class="logo-text">PHISHFORENSICS AI</span>
+            <span class="subtitle">AI Email Threat Analyzer</span>
+        </div>
+        <a href="#" id="downloadExtensionBtn" class="btn btn-primary">Download Extension</a>
+    </header>
+
+    <main class="landing-container">
+        <section class="hero-section">
+            <h1>Detect Phishing Before It Tricks You</h1>
+            <p class="hero-subtext">AI-powered forensic engine for emails and URLs</p>
+        </section>
+
+        <section class="input-section">
+            <textarea id="inputBox" class="input-box" placeholder="Paste suspicious email content or URL..."></textarea>
+            <button id="analyzeBtn" class="btn btn-primary" style="font-size: 1.1rem; padding: 15px 30px; margin-top: 10px;">⚡ Analyze Now</button>
+        </section>
+
+        <section id="historySection" class="history-section hidden">
+            <h3 class="section-title" style="justify-content: center;">Recent Analyses</h3>
+            <div id="historyCards" class="history-grid"></div>
+        </section>
+
+        <section class="feature-badges">
+            <span class="badge">🌐 URL Intelligence</span>
+            <span class="badge">🔤 Homograph Detection</span>
+            <span class="badge">📝 Header Analysis</span>
+            <span class="badge">🧠 AI Reasoning</span>
+        </section>
+
+        <footer>
+            <p class="footer-text">Runs 40+ security checks instantly</p>
+        </footer>
+    </main>
+
+    <div id="extensionInstallModal" class="install-modal hidden" aria-hidden="true">
+        <div class="install-modal-content glass-panel">
+            <button id="closeInstallModalBtn" class="btn btn-secondary install-close-btn" type="button">Close</button>
+            <h3 class="section-title">Install Browser Extension</h3>
+            <p class="install-intro" id="installIntroText">
+                Your browser blocks silent installs from websites. Follow the steps below for a one-minute setup.
+            </p>
+            <ol id="installStepsList" class="install-steps-list"></ol>
+            <div class="install-actions">
+                <button id="openExtensionsPageBtn" class="btn btn-primary" type="button">Download Now</button>
+            </div>
+            <p class="install-note">
+                Folder to select in "Load unpacked": <code>phish-forensics-extension</code>
+            </p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

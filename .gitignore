@@ -1,0 +1,7 @@
+# Phish Forensics Backend — gitignore
+# Never commit real secrets or dependencies
+
+.env
+api.env
+node_modules/
+*.log
