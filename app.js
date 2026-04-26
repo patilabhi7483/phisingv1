@@ -280,7 +280,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const finalInputPayload = input + preAnalysis.rawSignals;
                 
                 analyzeBtn.innerText = '⚡ AI Forensics...';
-                const response = await fetch('http://127.0.0.1:3000/analyze', {
+                const response = await fetch('https://phisingv1.onrender.com/analyze', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ input: finalInputPayload })
